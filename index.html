@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam-rescue</title>
+    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<header class="navbar">
+
+  
+    <a href="#home" class="logo">
+        <span class="logo-icon">
+            <i class="fa-solid fa-book-open"></i>
+        </span>
+
+        <span class="logo-text">Exam Rescue</span>
+    </a>
+
+
+    
+    <nav class="nav-links">
+
+        <a href="#home" class="nav-link active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="#how-it-works" class="nav-link">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>How It Works</span>
+        </a>
+
+        <a href="#planner" class="nav-link">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Planner</span>
+        </a>
+
+    </nav>
+
+
+    
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+<main>
+    
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="tagline">
+            <i class="fa-solid fa-bolt"></i>
+            Study smarter. Stress less.
+        </p>
+
+        <h1>
+            Turn Exam Chaos Into
+            <span>A Clear Plan.</span>
+        </h1>
+
+        <p class="hero-description">
+            Organize your syllabus, study material and previous year
+            questions into a focused study plan.
+        </p>
+
+        <button id="startBtn">
+            Start Planning
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+<section class="how-it-works" id="how-it-works">
+
+    <div class="section-heading">
+        <p>HOW IT WORKS</p>
+        <h2>Everything you need before the exam.</h2>
+    </div>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+            <i class="fa-solid fa-book"></i>
+            <h3>Add Your Syllabus</h3>
+            <p>
+                Enter the topics you need to cover before your exam.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-file-lines"></i>
+            <h3>Organize Materials</h3>
+            <p>
+                Keep your notes, assignments and study resources organized.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-chart-simple"></i>
+            <h3>Analyze PYQs</h3>
+            <p>
+                Identify frequently asked and important topics.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h3>Create Your Plan</h3>
+            <p>
+                Turn everything into a realistic revision schedule.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="planner" id="planner">
+
+    <div class="section-heading">
+        <p>START PLANNING</p>
+        <h2>Let's build your study plan.</h2>
+    </div>
+
+    <div class="planner-card">
+
+        <label for="subject">Subject</label>
+
+        <input
+            type="text"
+            id="subject"
+            placeholder="e.g. Heat Transfer"
+        >
+        <label for="syllabus">Syllabus Topics</label>
+
+<textarea
+    id="syllabus"
+    rows="5"
+    placeholder="Enter your topics, one per line...&#10;Example:&#10;Conduction&#10;Convection&#10;Radiation"
+></textarea>
+<label for="materials">Study Materials</label>
+
+<textarea
+    id="materials"
+    rows="5"
+    placeholder="Enter your study materials, one per line...&#10;Example:&#10;Class Notes&#10;Teacher Assignment&#10;Friend's Notes&#10;Textbook"
+></textarea>
+<label for="pyqs">Previous Year Questions</label>
+
+<textarea
+    id="pyqs"
+    rows="6"
+    placeholder="Enter previous year questions, one per line...&#10;Example:&#10;Derive the heat conduction equation&#10;Explain natural convection&#10;Derive the fin efficiency equation"
+></textarea>
+
+        <label for="days">Days remaining</label>
+
+        <select id="days">
+            <option value="1">1 Day</option>
+            <option value="2">2 Days</option>
+            <option value="3">3 Days</option>
+            <option value="4">4 Days</option>
+            <option value="5">5 Days</option>
+        </select>
+
+        <button id="createPlanBtn">
+            Create Study Plan
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </button>
+
+    </div>
+
+    <div id="planResult"></div>
+    <div class="ai-coach">
+
+    <div class="ai-coach-heading">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+        <div>
+            <p>AI STUDY COACH</p>
+            <h3>Get AI-powered study advice.</h3>
+        </div>
+    </div>
+
+    <button id="aiTestBtn">
+        Ask AI Study Coach
+        <i class="fa-solid fa-robot"></i>
+    </button>
+
+    <div id="aiResult"></div>
+
+</div>
+
+</section>
+</main>
+
+<footer>
+
+    <p>
+        Made with
+        <i class="fa-solid fa-heart"></i>
+        for students who are fighting the exam clock.
+    </p>
+
+</footer>
+ <script type="module">
+    import { pipeline } from
+        "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1";
+        window.pipeline = pipeline;
+        </script>
+
+   
+
+<script src="script.js"></script>
+</body>
+</html>
